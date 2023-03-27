@@ -1,0 +1,50 @@
+{
+  "name": "rescript-next-blog-template",
+  "version": "0.0.0",
+  "description": "Markdown blog template with ReScript and NextJS",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next",
+    "prebuild": "node scripts/convertMd.mjs",
+    "build": "rescript && next build",
+    "postbuild": "next-sitemap",
+    "start": "next start",
+    "res:build": "rescript",
+    "res:dev": "rescript build -w",
+    "markdown": "node scripts/convertMd.mjs"
+  },
+  "keywords": [
+    "rescript",
+    "nextjs",
+    "markdown"
+  ],
+  "author": "yaufai",
+  "license": "ISC",
+  "dependencies": {
+    "@rescript/react": "^0.11.0",
+    "bootstrap": "^5.2.3",
+    "date-fns": "^2.29.3",
+    "next": "^13.2.4",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "next-sitemap": "^4.0.6",
+    "prismjs": "^1.29.0",
+    "rehype-mathjax": "^4.0.2",
+    "rehype-stringify": "^9.0.3",
+    "rehype-slug": "^5.1.0",
+    "rehype-toc": "^3.0.2",
+    "remark": "^14.0.2",
+    "remark-emoji": "^3.1.1",
+    "remark-frontmatter": "^4.0.1",
+    "remark-html": "^15.0.2",
+    "remark-math": "^5.1.1",
+    "remark-prism": "^1.3.6",
+    "remark-rehype": "^10.1.0",
+    "rescript": "^10.1.3",
+    "rescript-json": "^1.0.6",
+    "rescript-next": "^12.0.1",
+    "vfile-matter": "^4.0.1"
+  }
+}

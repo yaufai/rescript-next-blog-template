@@ -1,0 +1,11 @@
+node_modules
+.next
+lib
+.merlin
+pages/**/*.mjs
+src/**/*.mjs
+.setten
+
+# Automatically generate by next-sitemap
+public/sitemap*
+public/robots.txt
