@@ -6,6 +6,11 @@
     import "../style/main.css";
 `)
 
+module GoogleAnalytics = {
+    @module("nextjs-google-analytics") 
+    @react.component external make: (~trackPageViews: bool) => React.element = "GoogleAnalytics"
+}
+
 type pageProps
 
 type props = {
@@ -18,7 +23,10 @@ let default = (props: props): React.element => {
     let {component, pageProps} = props
     let content = React.createElement(component, pageProps)
 
-    <Layout>
-        content
-    </Layout>
+    <>
+        // <GoogleAnalytics trackPageViews=true />
+        <Layout>
+            content
+        </Layout>
+    </>
 }

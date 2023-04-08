@@ -47,6 +47,7 @@ How to write your blog?
     - See [Site Config](site_config) for more details
 - `public/favicon.png`: set a favicon image for tabs opening your blog
 - `src/components/SocialButton.res`: decide which social links are available
+- See [details](analytics) if you need to enable Google Analytics
 
 To compile Markdown files:
 
@@ -68,6 +69,7 @@ Once you delete the sample Markdown files, update `pages/404.res` as this page t
 - sitemap generation
 - `meta` tag generation
 - social buttons
+- google analytics
 
 # Commands
 
@@ -82,4 +84,4 @@ Once you delete the sample Markdown files, update `pages/404.res` as this page t
 
 - [Directory Structure](directory_structure) to understand the template overview
 - [Markdown Syntax & Frontmatter](customize_markdown_and_frontmatter)
-
+- [Analytics](analytics)
