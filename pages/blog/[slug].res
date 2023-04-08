@@ -9,12 +9,13 @@ type propsSlug = {
 
 @react.component
 let default = (~post: Post.t, ~domain: string, ~related: array<Post.t>) => {
+    let url = `${domain}/blog/${post.frontmatter.slug}`
     <div>
         <Head>
             <meta property="og:title" content={post.frontmatter.title} />
             <meta property="og:description" content={post.frontmatter.description} />
             <meta property="og:type" content="article" />
-            <meta property="og:url" content={`${domain}/blog/${post.frontmatter.slug}`} />
+            <meta property="og:url" content={url} />
         </Head>
         <h1 className="text-3xl font-semibold">
             {post.frontmatter.title->React.string}
@@ -29,6 +30,7 @@ let default = (~post: Post.t, ~domain: string, ~related: array<Post.t>) => {
         <div
             dangerouslySetInnerHTML={{"__html": post.body.html}}
         />
+        <SocialButton url={`https://${url}`}/>
 
         <h1>
             {React.string("Related")}

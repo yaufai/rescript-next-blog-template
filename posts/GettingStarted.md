@@ -46,6 +46,7 @@ How to write your blog?
 - `site.config.mjs`: site and author profile
     - See [Site Config](site_config) for more details
 - `public/favicon.png`: set a favicon image for tabs opening your blog
+- `src/components/SocialButton.res`: decide which social links are available
 
 To compile Markdown files:
 
@@ -66,6 +67,7 @@ Once you delete the sample Markdown files, update `pages/404.res` as this page t
 
 - sitemap generation
 - `meta` tag generation
+- social buttons
 
 # Commands
 

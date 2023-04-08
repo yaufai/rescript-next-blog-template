@@ -25,6 +25,7 @@
     "bootstrap": "^5.2.3",
     "date-fns": "^2.29.3",
     "next": "^13.2.4",
+    "next-share": "^0.20.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
   },
