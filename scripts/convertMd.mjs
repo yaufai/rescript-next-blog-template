@@ -43,11 +43,11 @@ fs.readdirSync(DIR_POST)
             .use(() => (_, file) => {
                 matter(file)
             })
-            .use(remarkRehype, { sanitize: false })
+            .use(remarkRehype, { sanitize: false, allowDangerousHtml: true  })
             .use(rehypeMathJaxSvg)
             .use(rehypeSlug)
             .use(rehypeToc)
-            .use(rehypeStringify)
+            .use(rehypeStringify, { allowDangerousHtml: true })
             .processSync(fileProfile.rawBody)
         
         return {

@@ -58,6 +58,26 @@ Emoji names enclosed with `:` will be converted to corresponding emojis. Plese s
 (e.g.) `:+1` will be :+1:
 
 
+## Raw HTML
+
+Raw HTML tags in Markdown are output as HTML, which allows for a wider range of expression by incorporating styles and dynamic effects with JavaScript. However, this also means that there is a risk of introducing malicious code along with it. If there is a possibility of unsafe Markdown content being mixed in, please consider sanitizing or removing HTML with `convertMd.mjs`.
+
+Sanitization: make `sanitize` set `true`
+
+```js
+    .use(remarkRehype, { sanitize: false, allowDangerousHtml: true })
+```
+
+Removal of HTML: set `allowDangeroutHtml` as `false`
+
+```js
+    .use(remarkRehype, { sanitize: false, allowDangerousHtml: true })
+```
+
+```js
+    .use(rehypeStringify, { allowDangerousHtml: true })
+```
+
 # Frontmatter
 
 Frontmatter is a storage of metadata of the markdown file. The article title, description, tags and others can be stored in YAML format enclosed by `---` at the top of each markdown file.
