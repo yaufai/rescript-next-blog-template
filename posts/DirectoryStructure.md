@@ -25,6 +25,9 @@ The directory structure you have to know looks like below. This `tree`-like diag
 ├── src
 │   ├── components
 │   └── utils
+├── style
+│   ├── custom.scss
+│   └── main.scss
 └ ... some other config files
 ```
 
@@ -79,6 +82,11 @@ ReScript source files except `pages` are stored here.
 
 - `src/components`: ReactJS components
 - `src/utils`: tools to process data
+
+# `style` - style sheets
+
+- `src/custom.scss`: Customization of Bootstrap
+- `src/main.scss`: other styling
 
 # Configuration files
 

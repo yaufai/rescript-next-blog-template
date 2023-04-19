@@ -1,9 +1,9 @@
 %%raw(`
-    import "bootstrap/dist/css/bootstrap.min.css";
     import "katex/dist/katex.min.css";
     import "prismjs/themes/prism.css";
     import "prismjs/themes/prism.min.css";
-    import "../style/main.css";
+    import "../style/custom.scss";
+    import "../style/main.scss";
 `)
 
 module GoogleAnalytics = {
