@@ -56,6 +56,7 @@ let getStaticProps = ctx => {
             post   : post,
             domain : SiteConfig.make().domain,
             related: Post.loadByTagNames(post.frontmatter.tags->fromArray)
+                ->filter(post => post.frontmatter.slug != ctx["params"]["slug"])
                 ->toArray
                 ->Belt.Array.shuffle
                 ->Belt.Array.slice(~len=2, ~offset=0)
